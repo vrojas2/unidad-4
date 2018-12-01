@@ -1,7 +1,15 @@
 import Pelicula from "./Pelicula.js";
 
-var m1 = new Pelicula("Scarry Movie", 2000, 126);
-var m2 = new Pelicula("Toy Story", 2014, 200);
+var titulo = document.querySelector('#titulo');
+var año = document.querySelector('#año');
+var duracion = document.querySelector('#duracion');
 
-m1.imprimir();
-m2.imprimir();
+document.querySelector('#btnAgregar')
+.addEventListener('click', bnAgregar);
+
+function bnAgregar() {
+    let m1 = new Pelicula(titulo.value, Number
+    (año.value), Number(duracion.value));
+    
+    m1.imprimir();
+}
